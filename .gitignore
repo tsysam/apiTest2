@@ -133,3 +133,8 @@ tests/allure-report/
 tests/reports/
 allure-report/
 reports/
+
+# IntelliJ
+.idea/
+out/
+*.iml
