@@ -11,6 +11,9 @@ pip list
 
 ## Allure
 Install allure-pytest
+
 pytest getTest.py --alluredir ./reports
+
 allure generate -c ./reports
+
 allure serve ./reports        (optional)
