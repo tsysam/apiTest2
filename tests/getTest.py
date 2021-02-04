@@ -1,7 +1,5 @@
 import requests
 
-from requests import Response
-
 from core.api import Api
 
 
@@ -11,5 +9,5 @@ def test_simple_get():
 
 
 def test_simple_get2():
-    result: Response = Api.send_get()
+    result = Api.send_get()
     assert result.status_code == 200
