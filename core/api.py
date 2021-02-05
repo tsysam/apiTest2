@@ -8,7 +8,7 @@ class Api:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     parser = configparser.ConfigParser()
-    parser.read(os.path.join(BASE_DIR, 'tests', 'config.ini'))
+    parser.read(os.path.join(BASE_DIR, 'config.ini'))
     # parser.read(r'../config.ini')
     # parser.read('config.ini')
     # parser.read('..\\config.ini')
