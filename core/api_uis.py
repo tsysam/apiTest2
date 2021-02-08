@@ -9,9 +9,6 @@ class Api:
 
     parser = configparser.ConfigParser()
     parser.read(os.path.join(BASE_DIR, 'config.ini'))
-    # parser.read(r'../config.ini')
-    # parser.read('config.ini')
-    # parser.read('..\\config.ini')
 
     BASE_URL = parser.get('uis', 'url')
     GET_URL = BASE_URL + "/test/api/ping"
@@ -20,6 +17,5 @@ class Api:
     def send_get_ping():
         with step("Send get"):
             url = Api.GET_URL
-            print("\n" + url)
-            result = requests.get(url)
-            return result
+            response = requests.get(url, verify=False)
+            return response
