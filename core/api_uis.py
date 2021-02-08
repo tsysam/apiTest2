@@ -13,13 +13,13 @@ class Api:
     # parser.read('config.ini')
     # parser.read('..\\config.ini')
 
-    BASE_URL = parser.get('backend', 'url')
-    ENV = "/status"
-    GET_URL = BASE_URL + ENV + "/200"
+    BASE_URL = parser.get('uis', 'url')
+    GET_URL = BASE_URL + "/test/api/ping"
 
     @staticmethod
-    def send_get():
+    def send_get_ping():
         with step("Send get"):
             url = Api.GET_URL
+            print("\n" + url)
             result = requests.get(url)
             return result
