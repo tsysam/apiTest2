@@ -15,7 +15,7 @@ class Api:
 
     @staticmethod
     def send_get_ping():
-        with step("Send get"):
+        with step("GET /api/ping"):
             url = Api.GET_URL
             response = requests.get(url, verify=False)
             return response
